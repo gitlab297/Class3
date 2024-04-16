@@ -1,0 +1,23 @@
+class Building:
+
+    def __init__(self, NumberOfFloors, BuildingType):
+        self.NumberOfFloors = 0
+        self.BuildingType = 'Any'
+
+    def __eq__(self, other):
+        return self.NumberOfFloors == other.NumberOfFloors and self.BuildingType == other.BuildingType
+
+
+School = Building(NumberOfFloors=0, BuildingType='')
+Kindergarten = Building(NumberOfFloors=0, BuildingType='')
+
+School.NumberOfFloors = 4
+School.BuildingType = 'School'
+Kindergarten.NumberOfFloors = 2
+Kindergarten.BuildingType = 'Kindergarten'
+
+
+if Building.__eq__(self=School, other=Kindergarten) is True:
+    print('Строения одинаковые')
+else:
+    print('Строения разные')
